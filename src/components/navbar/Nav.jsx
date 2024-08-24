@@ -74,7 +74,6 @@ const Nav = () => {
               <MenuItem onClick={handleClose}>what we work on</MenuItem>
               <MenuItem onClick={handleClose}>our customer</MenuItem>
               <MenuItem onClick={handleClose}>our customer</MenuItem>
-              <MenuItem onClick={handleClose}>our customer</MenuItem>
             </Menu>
           </Toolbar>
         </AppBar>
