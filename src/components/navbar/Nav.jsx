@@ -55,7 +55,14 @@ const Nav = () => {
                 handleClose={handleClose}
               />
             )}
-            {matches && <MenuMobile />}
+            {matches && (
+              <MenuMobile
+                anchorEl={anchorEl}
+                open={open}
+                handleClick={handleClick}
+                handleClose={handleClose}
+              />
+            )}
           </Toolbar>
         </AppBar>
       </Container>

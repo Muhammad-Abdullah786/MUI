@@ -16,7 +16,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 export function MenuDesktop({ anchorEl, open, handleClick, handleClose }) {
   return (
     <>
-      <Stack direction="row" spacing={3} display={"flex"}>
+      <Stack direction="row-reverse" spacing={3} display={"flex"}>
         <Button
           id="work-menu"
           onClick={handleClick}
@@ -49,7 +49,7 @@ export function MenuDesktop({ anchorEl, open, handleClick, handleClose }) {
   );
 }
 
-export function MenuMobile() {
+export function MenuMobile({ anchorEl, open, handleClick, handleClose }) {
   const [isDawerOpen, setIsDrawerOpen] = useState(false);
   return (
     <>
@@ -68,12 +68,20 @@ export function MenuMobile() {
         onClose={() => setIsDrawerOpen(false)}
       >
         <Box width={"250px"} textAlign={"center"} role={"presentation"}>
-          <Typography>Hello</Typography>
-
-          <Stack direction="column" spacing={3} display={"flex"}>
+          <IconButton edge="start" color="inherit" disableRipple>
+            <Stack
+              sx={{
+                width: { xs: 50, sm: 90, md: 120, lg: 180 },
+                //   height: { xs: 100, sm: 200, md: 100, lg: 600 },
+              }}
+            >
+              <img src="../../src/assets/Logo.jpg" alt="LOGo" />
+            </Stack>
+          </IconButton>
+          <Stack direction="column-reverse" spacing={3} display={"flex"}>
             <Button
               id="work-menu"
-              // onClick={handleClick}
+              onClick={handleClick}
               aria-controls={open ? "menu-work" : undefined}
               aria-haspopup="true"
               aria-expanded={open ? "true" : undefined}
@@ -86,7 +94,7 @@ export function MenuMobile() {
             <Button>HEllo</Button>
             <Button>HEllo</Button>
           </Stack>
-          {/* <Menu
+          <Menu
             id="menu-work"
             anchorEl={anchorEl}
             open={open}
@@ -98,7 +106,7 @@ export function MenuMobile() {
             <MenuItem onClick={handleClose}>what we work on</MenuItem>
             <MenuItem onClick={handleClose}>our customer</MenuItem>
             <MenuItem onClick={handleClose}>our customer</MenuItem>
-          </Menu> */}
+          </Menu>
         </Box>
       </Drawer>
     </>
