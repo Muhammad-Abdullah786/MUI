@@ -1,14 +1,4 @@
-import {
-  Container,
-  Typography,
-  Button,
-  AppBar,
-  Toolbar,
-  IconButton,
-  Stack,
-  Menu,
-  MenuItem,
-} from "@mui/material";
+import { Container, AppBar, Toolbar, IconButton, Stack } from "@mui/material";
 import { KeyboardArrowDownRounded } from "@mui/icons-material";
 import React, { useState } from "react";
 
@@ -47,34 +37,6 @@ const Nav = () => {
                 <img src="../../src/assets/download (8).png" alt="LOGo" />
               </Stack>
             </IconButton>
-            <Stack direction="row" spacing={3}>
-              <Button>Hello</Button>
-              <Button>Hello</Button>
-              <Button
-                id="work-menu"
-                onClick={handleClick}
-                aria-controls={open ? "menu-work" : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? "true" : undefined}
-                endIcon={<KeyboardArrowDownRounded />}
-              >
-                Work
-              </Button>
-              <Button>Hello</Button>
-            </Stack>
-            <Menu
-              id="menu-work"
-              anchorEl={anchorEl}
-              open={open}
-              MenuListProps={{
-                "aira-labelledby": "work-menu",
-              }}
-              onClose={handleClose}
-            >
-              <MenuItem onClick={handleClose}>what we work on</MenuItem>
-              <MenuItem onClick={handleClose}>our customer</MenuItem>
-              <MenuItem onClick={handleClose}>our customer</MenuItem>
-            </Menu>
           </Toolbar>
         </AppBar>
       </Container>
