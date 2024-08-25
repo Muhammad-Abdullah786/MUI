@@ -26,8 +26,10 @@ const Nav = () => {
         <AppBar
           position="static"
           sx={{
-            backgroundColor: "brown",
+            backgroundColor: "#ffffff",
             display: "flex",
+            // now i have to remove shadow
+            boxShadow: "none",
           }}
         >
           <Toolbar
@@ -44,7 +46,7 @@ const Nav = () => {
                   //   height: { xs: 100, sm: 200, md: 100, lg: 600 },
                 }}
               >
-                <img src="../../src/assets/download (8).png" alt="LOGo" />
+                <img src="../../src/assets/Logo.jpg" alt="LOGo" />
               </Stack>
             </IconButton>
             {!matches && (

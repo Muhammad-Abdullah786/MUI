@@ -60,7 +60,7 @@ export function MenuMobile({ anchorEl, open, handleClick, handleClose }) {
         onClick={() => setIsDrawerOpen(true)}
         color="inherit"
       >
-        <MenuIcon />
+        <MenuIcon color="primary" />
       </IconButton>
       <Drawer
         anchor="right"

@@ -9,4 +9,19 @@ export const theme = createTheme({
       desktop: 1200,
     },
   },
+  // now gonna change the theme color
+  palette: {
+    primary: {
+      main: "#525252",
+    },
+    secondary: {
+      main: "#F5F5F5",
+    },
+  },
+  typography: {
+    fontFamily: "Gilroy",
+    fontSize: 16,
+    color: 'black'
+  },
+  // and add more styles here
 });
