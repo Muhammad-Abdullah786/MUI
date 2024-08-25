@@ -1,5 +1,5 @@
 import Nav from "./components/navbar/Nav";
 import Topbar from "./components/topbar/Topbar";
-import Menu from "../src/components/navbar/Menu"
+import Screen from "./components/landingScreen/Screen";
 
-export { Nav, Topbar, Menu }; 
+export { Nav, Topbar, Screen }; 

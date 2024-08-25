@@ -1,8 +1,8 @@
-import { styled, ThemeProvider, Typography } from "@mui/material";
+import { Container, styled, ThemeProvider, Typography } from "@mui/material";
 import { green, purple, red, blue } from "@mui/material/colors";
 import React, { useEffect, useState } from "react";
 import { theme } from "../src/style";
-import { Topbar, Nav } from "../src/index";
+import { Topbar, Nav, Screen } from "../src/index";
 
 export default function App() {
   const Responsive = styled("div")(({ theme }) => ({
@@ -25,8 +25,11 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <Responsive>
           <Topbar />
-          <Nav />
-          {/* <Typography variant="h1">Hello</Typography> */}
+          <Container>
+            <Nav />
+            <Screen />
+            {/* <Typography variant="h1">Hello</Typography> */}
+          </Container>
         </Responsive>
       </ThemeProvider>
     </>

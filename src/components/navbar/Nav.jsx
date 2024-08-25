@@ -28,7 +28,6 @@ const Nav = () => {
           sx={{
             backgroundColor: "#ffffff",
             display: "flex",
-            // now i have to remove shadow
             boxShadow: "none",
           }}
         >
@@ -46,7 +45,7 @@ const Nav = () => {
                   //   height: { xs: 100, sm: 200, md: 100, lg: 600 },
                 }}
               >
-                <img src="../../src/assets/Logo.jpg" alt="LOGo" />
+                <img src="../../src/assets/Small img/Logo.jpg" alt="LOGo" />
               </Stack>
             </IconButton>
             {!matches && (
