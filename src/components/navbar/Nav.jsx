@@ -1,8 +1,17 @@
-import { Container, AppBar, Toolbar, IconButton, Stack } from "@mui/material";
+import {
+  Container,
+  AppBar,
+  useMediaQuery,
+  Toolbar,
+  IconButton,
+  Stack,
+} from "@mui/material";
 import React, { useState } from "react";
-import Menu from "../../src/components/navbar/Menu";
+import { MenuDesktop, MenuMobile } from "./Menu";
+import { theme } from "../../style";
 
 const Nav = () => {
+  const matches = useMediaQuery(theme.breakpoints.down("tablet"));
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (e) => {
@@ -21,16 +30,11 @@ const Nav = () => {
             display: "flex",
           }}
         >
-          <Menu
-            anchorEl={anchorEl}
-            open={open}
-            handleClick={handleClick}
-            handleClose={handleClose}
-          />
           <Toolbar
             sx={{
               display: "flex",
               justifyContent: "space-between",
+              alignItems: "center",
             }}
           >
             <IconButton edge="start" color="inherit" disableRipple>
@@ -43,6 +47,15 @@ const Nav = () => {
                 <img src="../../src/assets/download (8).png" alt="LOGo" />
               </Stack>
             </IconButton>
+            {!matches && (
+              <MenuDesktop
+                anchorEl={anchorEl}
+                open={open}
+                handleClick={handleClick}
+                handleClose={handleClose}
+              />
+            )}
+            {matches && <MenuMobile />}
           </Toolbar>
         </AppBar>
       </Container>
