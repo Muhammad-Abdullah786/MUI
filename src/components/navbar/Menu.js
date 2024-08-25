@@ -1,28 +1,10 @@
 import React from "react";
 import { Typography, Button, Menu, MenuItem } from "@mui/material";
 
-export function MenuDesktop() {
-  const buttonLabel = ["hello", "bye", "hello", "work", "hello"];
+export function MenuDesktop({ anchorEl, open, handleClick, handleClose }) {
   return (
     <>
       <Stack direction="row" spacing={3}>
-        {buttonLabel.map((label, index) => {
-          <Button
-            key={index}
-            id={
-              label === "work" || label === "bye"
-                ? `${label.toLowerCase}`
-                : undefined
-            }
-            onClick={handleClick}
-            aria-controls={open ? "menu-work" : undefined}
-            aria-haspopup="true"
-            aria-expanded={open ? "true" : undefined}
-            endIcon={<KeyboardArrowDownRounded />}
-          >
-            {label}
-          </Button>;
-        })}
         <Button
           id="work-menu"
           onClick={handleClick}
@@ -33,6 +15,10 @@ export function MenuDesktop() {
         >
           Work
         </Button>
+        <Button>HEllo</Button>
+        <Button>HEllo</Button>
+        <Button>HEllo</Button>
+        <Button>HEllo</Button>
       </Stack>
       <Menu
         id="menu-work"
@@ -51,4 +37,10 @@ export function MenuDesktop() {
   );
 }
 
-export default Menu;
+export function MenuMobile() {
+  return (
+    <>
+      <Typography variant="h3">H2llo</Typography>
+    </>
+  );
+}

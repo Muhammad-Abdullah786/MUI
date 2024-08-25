@@ -1,6 +1,6 @@
 import { Container, AppBar, Toolbar, IconButton, Stack } from "@mui/material";
-import { KeyboardArrowDownRounded } from "@mui/icons-material";
 import React, { useState } from "react";
+import Menu from "../../src/components/navbar/Menu";
 
 const Nav = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -21,6 +21,12 @@ const Nav = () => {
             display: "flex",
           }}
         >
+          <Menu
+            anchorEl={anchorEl}
+            open={open}
+            handleClick={handleClick}
+            handleClose={handleClose}
+          />
           <Toolbar
             sx={{
               display: "flex",
