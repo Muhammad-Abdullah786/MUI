@@ -12,6 +12,7 @@ export default function Screen() {
           //   backgroundColor: "rgba(0, 0, 0, 0.5)",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          position: "relative",
 
           padding: "2rem",
         }}
@@ -22,9 +23,12 @@ export default function Screen() {
             justifyContent: "flex-start",
             maxWidth: "1832.05px",
             height: "862.35px",
-position:
             padding: "2rem",
             borderRadius: "8px",
+            display: "flex",
+            alignItems: "flex-start",
+            justifyContent: "center",
+            flexDirection: "column",
           }}
         >
           <Typography variant="h4" sx={{ color: "white", fontWeight: "bold" }}>
@@ -48,5 +52,3 @@ position:
     </>
   );
 }
-
-// export default Screen;
