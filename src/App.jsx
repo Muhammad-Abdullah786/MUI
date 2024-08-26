@@ -2,7 +2,7 @@ import { Container, styled, ThemeProvider, Typography } from "@mui/material";
 import { green, purple, red, blue } from "@mui/material/colors";
 import React, { useEffect, useState } from "react";
 import { theme } from "../src/style";
-import { Topbar, Nav, Screen } from "../src/index";
+import { Topbar, Nav, Screen, Section, Footer } from "../src/index";
 
 export default function App() {
   const Responsive = styled("div")(({ theme }) => ({
@@ -28,8 +28,10 @@ export default function App() {
           <Container>
             <Nav />
             <Screen />
+            <Section />
             {/* <Typography variant="h1">Hello</Typography> */}
           </Container>
+          <Footer />
         </Responsive>
       </ThemeProvider>
     </>
