@@ -1,7 +1,5 @@
-import { Box, Stack, Typography, Button } from "@mui/material";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import React, { useState } from "react";
+import { Box, Stack, Typography } from "@mui/material";
+import React from "react";
 import { ImgSlider } from "../../index";
 
 const imgList = [
@@ -27,24 +25,10 @@ const imgList = [
     img: "../..//src/assets/card img/pexels-vecislavas-popa-3741317.jpg",
   },
 ];
+
 export default function Section() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? imgList.length - 1 : prevIndex - 1
-    );
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === imgList.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
   return (
     <>
-      {/* <Typography>Hello</Typography> */}
       <Box
         sx={{
           margin: "130px 0 ",
@@ -68,39 +52,8 @@ export default function Section() {
             What Type of project do you have?
           </Typography>
         </Stack>
-
         {/* this is where the img slider will come */}
-        <ImgSlider imgList={imgList} currentIndex={currentIndex} />
-        <Button
-          variant="contained"
-          onClick={handlePrev}
-          sx={{
-            position: "relative",
-            top: "50%",
-            left: 0,
-            transform: "translateY(-50%)",
-            zIndex: 1,
-          }}
-        >
-          <ArrowBackIosIcon />
-          Prev
-        </Button>
-
-        {/* Next Button */}
-        <Button
-          variant="contained"
-          onClick={handleNext}
-          sx={{
-            position: "relative",
-            top: "50%",
-            right: 0,
-            transform: "translateY(-50%)",
-            zIndex: 1,
-          }}
-        >
-          Next
-          <ArrowForwardIosIcon />
-        </Button>
+        <ImgSlider imgList={imgList} />
       </Box>
     </>
   );
