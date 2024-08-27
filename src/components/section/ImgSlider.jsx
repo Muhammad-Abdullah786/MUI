@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import React from "react";
+import React, { useRef } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -7,6 +7,15 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 export default function ImgSlider({ imgList }) {
+  let sliderRef = useRef(null);
+
+  const next = () => {
+    sliderRef.slickNext();
+  };
+  const previous = () => {
+    sliderRef.slickPrev();
+  };
+
   var settings = {
     dots: false,
     infinite: true,
@@ -44,13 +53,20 @@ export default function ImgSlider({ imgList }) {
   return (
     <>
       <div className="slider-container">
-        <Slider {...settings}>
+        <Slider
+          ref={(slider) => {
+            sliderRef = slider;
+          }}
+          {...settings}
+        >
           {imgList.map((item) => (
             <div
               key={item.img}
-              style={{
-                padding: "0 10px", // This adds horizontal padding to each image
-              }}
+              style={
+                {
+                  // margin: "0 1000px",
+                }
+              }
             >
               <img
                 src={`${item.img}`}
@@ -61,14 +77,16 @@ export default function ImgSlider({ imgList }) {
                   width: "100%",
                   height: "100%",
                   objectFit: "cover",
-                  //   padding: "0px 10px",
+                  // margin: "0px 10px",
                 }}
               />
             </div>
           ))}
         </Slider>
       </div>
+
       <Button
+        onClick={previous}
         variant="contained"
         sx={{
           position: "absolute",
@@ -76,20 +94,20 @@ export default function ImgSlider({ imgList }) {
           top: "200%",
         }}
       >
-        Next
-        <ArrowForwardIosIcon />
+        <ArrowBackIosIcon />
+        Prev
       </Button>
-
       <Button
         variant="contained"
+        onClick={next}
         sx={{
           position: "absolute",
           right: 0,
           top: "200%",
         }}
       >
-        <ArrowBackIosIcon />
-        Prev
+        Next
+        <ArrowForwardIosIcon />
       </Button>
     </>
   );
