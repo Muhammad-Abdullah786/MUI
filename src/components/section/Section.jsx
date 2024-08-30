@@ -1,6 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
 import { ImgSlider } from "../../index";
+import { theme } from "../../style";
 
 const imgList = [
   {
@@ -41,13 +42,42 @@ export default function Section() {
               color: "primary.main",
               fontWeight: "bold",
               letterSpacing: "4px",
+              [theme.breakpoints.up("mobile")]: {
+                fontSize: "1.5rem",
+              },
+              [theme.breakpoints.up("tablet")]: {
+                fontSize: "2rem",
+              },
+              [theme.breakpoints.up("laptop")]: {
+                fontSize: "2.5rem",
+              },
+              [theme.breakpoints.up("desktop")]: {
+                fontSize: "3rem",
+              },
             }}
           >
             START YOUR JOURNEY
           </Typography>
           <Typography
             variant="body1"
-            sx={{ color: "primary.main", margin: "1rem 0" }}
+            sx={{
+              color: "primary.main",
+              margin: "1rem 0",
+              color: "primary.main",
+              margin: "1rem 0",
+              [theme.breakpoints.up("mobile")]: {
+                fontSize: "1rem",
+              },
+              [theme.breakpoints.up("tablet")]: {
+                fontSize: "1.5rem",
+              },
+              [theme.breakpoints.up("laptop")]: {
+                fontSize: "2rem",
+              },
+              [theme.breakpoints.up("desktop")]: {
+                fontSize: "2.25rem",
+              },
+            }}
           >
             What Type of project do you have?
           </Typography>

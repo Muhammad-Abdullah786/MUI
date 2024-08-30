@@ -69,7 +69,7 @@ export function MenuMobile({ anchorEl, open, handleClick, handleClose }) {
           <IconButton edge="start" color="inherit" disableRipple>
             <Stack
               sx={{
-                width: { xs: 50, sm: 90, md: 120, lg: 180 },
+                width: { mobile: 50, tablet: 90, laptop: 120, desktop: 180 },
                 //   height: { xs: 100, sm: 200, md: 100, lg: 600 },
               }}
             >

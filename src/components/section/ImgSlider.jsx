@@ -60,10 +60,7 @@ export default function ImgSlider({ imgList }) {
           {...settings}
         >
           {imgList.map((item) => (
-            <div
-              key={item.img}
-              
-            >
+            <div key={item.img}>
               <img
                 src={`${item.img}`}
                 alt="slider-image"

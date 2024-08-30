@@ -13,7 +13,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
-function SecondImgSlider({ imgSlider2 }) {
+function SecImgSliderMobile({ imgSlider2 }) {
   const [expanded, setExpanded] = useState(false);
 
   const handleAccordionChange = (event, isExpanded) => {
@@ -67,21 +67,20 @@ function SecondImgSlider({ imgSlider2 }) {
           <Stack
             sx={{ width: "100%" }}
             spacing={1}
-            direction={"row"}
+            direction={"column"}
             key={index}
           >
             <Stack
               sx={{
                 position: "relative",
                 overflow: "hidden",
-                width: { mobile: 90, tablet: 200, laptop: 300, desktop: 360 },
                 height: imgHeight,
               }}
             >
               <img
                 src={item.img1}
                 alt="img1"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }} // Ensure image covers the fixed height
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
 
               <Accordion
@@ -132,4 +131,4 @@ function SecondImgSlider({ imgSlider2 }) {
   );
 }
 
-export default SecondImgSlider;
+export default SecImgSliderMobile;
