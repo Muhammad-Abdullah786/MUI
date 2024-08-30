@@ -62,11 +62,7 @@ export default function ImgSlider({ imgList }) {
           {imgList.map((item) => (
             <div
               key={item.img}
-              style={
-                {
-                  // margin: "0 1000px",
-                }
-              }
+              
             >
               <img
                 src={`${item.img}`}
