@@ -76,7 +76,7 @@ function SecSection() {
                 fontSize: "2rem",
               },
               [theme.breakpoints.up("laptop")]: {
-                fontSize: "2.5rem",
+                fontSize: "2rem",
               },
               [theme.breakpoints.up("desktop")]: {
                 fontSize: "3rem",
@@ -97,10 +97,10 @@ function SecSection() {
                 fontSize: "2rem",
               },
               [theme.breakpoints.up("laptop")]: {
-                fontSize: "2.5rem",
+                fontSize: "2rem",
               },
               [theme.breakpoints.up("desktop")]: {
-                fontSize: "3rem",
+                fontSize: "2rem",
               },
             }}
           >

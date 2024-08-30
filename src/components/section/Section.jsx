@@ -52,7 +52,7 @@ export default function Section() {
                 fontSize: "2.5rem",
               },
               [theme.breakpoints.up("desktop")]: {
-                fontSize: "3rem",
+                fontSize: "2.5rem",
               },
             }}
           >
@@ -72,10 +72,10 @@ export default function Section() {
                 fontSize: "1.5rem",
               },
               [theme.breakpoints.up("laptop")]: {
-                fontSize: "2rem",
+                fontSize: "1.5rem",
               },
               [theme.breakpoints.up("desktop")]: {
-                fontSize: "2.25rem",
+                fontSize: "2rem",
               },
             }}
           >

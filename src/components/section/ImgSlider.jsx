@@ -84,7 +84,12 @@ export default function ImgSlider({ imgList }) {
         sx={{
           position: "absolute",
           left: 0,
-          top: "200%",
+          top: {
+            mobile: "180%",
+            tablet: "190%",
+            laptop: "200%",
+            desktop: "180%",
+          },
         }}
       >
         <ArrowBackIosIcon />
@@ -96,7 +101,12 @@ export default function ImgSlider({ imgList }) {
         sx={{
           position: "absolute",
           right: 0,
-          top: "200%",
+          top: {
+            mobile: "180%",
+            tablet: "190%",
+            laptop: "200%",
+            desktop: "180%",
+          },
         }}
       >
         Next
