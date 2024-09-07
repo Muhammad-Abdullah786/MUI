@@ -19,7 +19,7 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Gilroy",
+    fontFamily: "Poppins",
     fontSize: 16,
     color: 'black'
   },
