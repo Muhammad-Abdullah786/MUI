@@ -1,17 +1,13 @@
-## Installation
+# Installation
 
-'''bash
-// git clone https://github.com/your-username/your-repo.git
+```bash
+git clone https://github.com/your-username/your-repo.git
 
-'''bash
-// cd your-repo
+cd your-repo
 
-'''bash
-// npm i
 
-## Usage
+npm i
 
-'''bash
-// npm run dev
 
-http://localhost:3000
+
+npm run dev
